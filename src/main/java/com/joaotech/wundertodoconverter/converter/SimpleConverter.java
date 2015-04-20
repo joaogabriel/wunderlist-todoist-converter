@@ -32,9 +32,7 @@ public class SimpleConverter {
 		try {
 			ObjectMapper mapper = new ObjectMapper();
 
-			JsonNode node = mapper.readTree(json);
-
-			JsonNode dataNode = node.get("data");
+			JsonNode dataNode = mapper.readTree(json).get("data");
 
 			extractLists(dataNode);
 			extractNotes(dataNode);
@@ -59,7 +57,7 @@ public class SimpleConverter {
 		while (elements.hasNext()) {
 			listNode = elements.next();
 			
-			lists.put(listNode.get("id").toString(), listNode.get("title").toString());
+			lists.put(listNode.get("id").asText(), listNode.get("title").asText());
 		}
 	}
 	
@@ -71,7 +69,7 @@ public class SimpleConverter {
 		while (elements.hasNext()) {
 			noteNode = elements.next();
 			
-			nodes.add(new Note(noteNode.get("id").toString(), noteNode.get("task_id").toString(), noteNode.get("content").toString()));
+			nodes.add(new Note(noteNode.get("id").asText(), noteNode.get("task_id").asText(), noteNode.get("content").asText()));
 		}
 	}
 	
