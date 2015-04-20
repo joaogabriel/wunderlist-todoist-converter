@@ -5,6 +5,7 @@ public class Task {
 	private String id;
 	private String listId;
 	private String title;
+	private String dueDate;
 	private boolean completed;
 	private boolean starred;
 
@@ -30,6 +31,14 @@ public class Task {
 
 	public void setTitle(String title) {
 		this.title = title;
+	}
+	
+	public String getDueDate() {
+		return dueDate;
+	}
+	
+	public void setDueDate(String dueDate) {
+		this.dueDate = dueDate;
 	}
 
 	public boolean isCompleted() {

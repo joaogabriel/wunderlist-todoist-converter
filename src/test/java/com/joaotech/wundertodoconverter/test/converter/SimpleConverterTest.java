@@ -10,11 +10,10 @@ public class SimpleConverterTest {
 
 	@Test
 	public void simpleFileConverterTest() {
-		File json = new File("C:\\Users\\Gabriel\\Dropbox\\Wunderlist Backup\\wunderlist-20150418-final.json");
-		File generationDir = new File("C:\\Tesmp");
+		File json = new File("C:\\Users\\Gabriel\\Dropbox\\Wunderlist Backup\\wunderlist-20150418-final-edit.json");
 		
 		SimpleConverter simpleConverter = new SimpleConverter(json);
-		simpleConverter.processJson(generationDir);
+		simpleConverter.processJson("C:\\Temp");
 	}
 	
 }
