@@ -16,8 +16,8 @@ import java.util.Map;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.joaotech.wundertodoconverter.node.Note;
-import com.joaotech.wundertodoconverter.node.Task;
+import com.joaotech.wundertodoconverter.wunderlist.json.Note;
+import com.joaotech.wundertodoconverter.wunderlist.json.Task;
 
 /**
  * TODO

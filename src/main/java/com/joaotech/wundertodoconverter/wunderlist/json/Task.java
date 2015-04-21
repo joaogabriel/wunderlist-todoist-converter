@@ -1,4 +1,4 @@
-package com.joaotech.wundertodoconverter.node;
+package com.joaotech.wundertodoconverter.wunderlist.json;
 
 public class Task {
 
